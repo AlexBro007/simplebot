@@ -17,6 +17,7 @@ def start_bot(update, bot):
 
 def chat(update, bot):
 	text = update.message.text
+	logging.info("Пользователь {} напечатал сообщение: ".format(update.message.chat.username))
 	logging.info(text)
 	update.message.reply_text(text + " че")
 
