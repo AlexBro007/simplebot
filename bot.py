@@ -10,14 +10,14 @@ logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s',
 def start_bot(update, bot):
 
 
-	mytext = "Привет {}! Я простой бот и понимаю только команду {}".format(update.message.chat.first_name, '/start')
-	logging.info("Пользователь {} нажал /start".format(update.message.chat.username))
+	mytext = "Yo {}! Im a simple bot and I know only the command {}".format(update.message.chat.first_name, '/start')
+	logging.info("User {} entered /start".format(update.message.chat.username))
 
 	update.message.reply_text(mytext)
 
 def chat(update, bot):
 	text = update.message.text
-	logging.info("Пользователь {} напечатал сообщение: ".format(update.message.chat.username))
+	logging.info("user {} entered a message: ".format(update.message.chat.username))
 	logging.info(text)
 	update.message.reply_text(text + " че")
 
